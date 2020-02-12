@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia de Juegos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+    <div id="contenedorPrincipal">
+        <img src="img/laboratoria.png" width="400" height="150">
+        <div id="contenedor1" >
+          <h1>BIENVENIDO A ESTE JUEGO!</h1>
+          <p>INGRESA TU NOMBRE PARA JUGAR :)</p>
+          <input id = "namejugador" type="text" class="nombre"> <br>
+          <input type="button" class="button" value="INGRESAR" onclick="siguiente()">
+          
+        </div>
+      <div id="contenedor2" class="ocultar">
+        <p id="saludo"></p>
+        <p>Para poder iniciar el juego, favor de seleccionar una opcion.</p>
+        <input type="button" class="button" value="Escritores Peruanos" onclick="eperuanos()">
+        <input type="button" class="button" value="Escritores Extranjeros" onclick="eextranjeros()">
+      </div>
+      
+      <div id="ep_pregunta1" class="ocultar">
+        <form id="ep1">
+          <p>1. ¿Quién es el autor del libro "La ciudad y los perros"?</p>
+          <div class="alternativas">
+            <label ><input type="radio" name="peruanos1" value="0"> César Vallejo <br></label>            
+            <input type="radio" name="peruanos1" value="1"> Mario Vargas Llosa <br>
+            <input type="radio" name="peruanos1" value="0"> Julio Ramon Ribeyro <br><br>
+            <input type="button" class="button" value="Siguiente" onclick="siguiente1_ep()">
+          </div>
+                  
+        </form>   
+      </div>
+      <div id="ep_pregunta2" class="ocultar">
+        <form id="ep2">
+          <p>2. El escritor Peruano Ciro Alegría escribio el libro:</p> 
+          <div class="alternativas">
+            <input type="radio" name="peruanos2" value="1"> Los Perros Hambrientos<br>
+            <input type="radio" name="peruanos2" value="0"> Trilce <br>
+            <input type="radio" name="peruanos2" value="0"> Los Heraldos Negros<br><br>
+            <input type="button" class="button" value="Siguiente" onclick="siguiente2_ep()">
+          </div> 
+          
+        </form>   
+        </div>
+        <div id="ep_pregunta3" class="ocultar">
+            <form id="ep3">
+              <p>3.¿Quién es el autor del libro "Los Ríos Profundos"? </p>
+              <div class="alternativas">
+                <input type="radio" name="peruanos3" value="0"> Mario Vargas Llosa<br>
+                <input type="radio" name="peruanos3" value="0"> César Vallejo <br>
+                <input type="radio" name="peruanos3" value="1"> Jose Maria Arguedas<br><br>
+                <input type="button" class="button" value="Enviar Respuestas" onclick="siguiente3_ep()"> 
+              </div> 
+            </form>   
+          </div>
+          <div id="resultados_ep">
+            <p>Tus Resultados son: </p>
+            <p id="notafinal_ep"></p>
+            <input type="button" class="button" value="Ir al Inicio!" onclick="location.reload()">
+            <input type="button" class="button" value="Jugar otra Vez!" onclick="eperuanos()">
+          </div>
+          <div id="ee_pregunta1" class="ocultar">
+            <form id="ee1">
+              <p>1. La "Casa de los Espiritus" fue escrita por:</p>
+              <div class="alternativas">
+                <input type="radio" name="extranjeros1" value="1"> Isabel Allende <br>
+                <input type="radio" name="extranjeros1" value="0" id="c1"> Stephenie Meyer <br>
+                <input type="radio" name="extranjeros1" value="0"> Edgar Alan Poe <br><br>
+                <input type="button" class="button" value="Siguiente" onclick="siguiente1_ee()">
+              </div>
+                      
+            </form>   
+          </div>
+          <div id="ee_pregunta2" class="ocultar">
+            <form id="ee2">
+              <p>2. El libro "La Huesped" fue escrita por el autor:</p>
+              <div class="alternativas">
+                <input type="radio" name="extranjeros2" value="0"> Amin Maalouf<br>
+                <input type="radio" name="extranjeros2" value="1"> Stephenie Meyer <br>
+                <input type="radio" name="extranjeros2" value="0"> Margaret Atwod<br><br>
+                <input type="button" class="button" value="Siguiente" onclick="siguiente2_ee()">
+              </div> 
+              
+            </form>   
+            </div>
+            <div id="ee_pregunta3" class="ocultar">
+                <form id="ee3">
+                  <p>3. El escritor JRR TOLKIEN, escribo el libro:</p>
+                  <div class="alternativas">
+                    <input type="radio" name="extranjeros3" value="0"> Crepúsculo<br>
+                    <input type="radio" name="extranjeros3" value="0"> Más allá del Invierno <br>
+                    <input type="radio" name="extranjeros3" value="1"> El Señor de los Anillos<br><br>
+                    <input type="button" class="button" value="Enviar Respuestas" onclick="siguiente3_ee()">
+                  </div>
+                 
+                </form>   
+              </div>
+        <div id="resultados_ee">
+          <p>Tus Resultados son: </p>
+          <p id="notafinal_ee"></p>
+          <input type="button" class="button" value="Ir al Inicio!" onclick="location.reload()">
+          <input type="button" class="button" value="Jugar otra Vez!" onclick="eextranjeros()">
+        </div>
+
+
+      <!-- <a href="pagina2.html">Saludo</a> -->
+      <script type="text/javascript" src="app.js">
+
+      </script>
+    </div>
+  </body>
+</html>
